@@ -1,0 +1,132 @@
+@import url('reset.css'); 
+
+.grid-container {
+    margin-top: 15px; 
+    height: 70vh; 
+    width: 90%; 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 2fr 1fr; 
+    place-items: center; 
+    background-color: magenta; 
+    border-radius: 8px;
+    max-width: 900px; 
+    max-height: 450px; 
+}
+
+img {
+    border-radius: 50%;
+    max-width: 10rem; 
+    max-height: 10rem;  
+}
+
+body {
+    place-items: center;
+    
+}
+
+#org {
+    font-weight: bold;
+    font-size: 1.25em; 
+}
+
+.italic {
+    font-style: italic;
+}
+
+.item-3 {
+    text-align: center; 
+}
+
+.item-4 {
+    text-align: center; 
+}
+
+h2.italic {
+    font-weight: 450; 
+    font-size: 1.25em;
+}
+
+h1 {
+    font-weight: 500; 
+    font-size: 1.5rem;
+}
+
+
+
+
+
+@media screen and (min-width: 500px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 3fr 1fr; 
+    }
+
+    .grid-wrapper {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr; 
+        place-items: center; 
+          
+    }
+
+    .item-1 {
+        grid-area: 1 / 1 / span 1 / span 2; 
+    }
+
+    .item-2 {
+        grid-area: 2 / 1 / span 1 / span 2; 
+        width: 100%;
+    }
+
+    .item-3 {
+        grid-area: 1 / 1 / span 1 / span 1;
+          
+        align-self: start;
+        justify-self: center;  
+    }
+    .item-4 {
+        grid-area: 1 / 2 / span 1 / span 1;
+        
+        align-self: Start;
+        justify-self: center; 
+        
+    }
+}
+
+@media screen and (min-width: 768px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 3fr 1fr; 
+    }
+
+    .grid-wrapper {
+        display: grid; 
+        grid-template-columns: 1fr;  
+        grid-template-rows: 1fr 1fr; 
+        place-items: center; 
+        
+          
+    }
+
+    .item-1 {
+        grid-area: 1 / 1 / span 2 / span 1; 
+    }
+
+    .item-2 {
+        grid-area: 1 / 2 / span 2 / span 1; 
+         
+    }
+
+    .item-3 {
+        grid-area: 1 / 1 / span 1 / span 2;
+        align-self: start;
+        justify-self: center;  
+    }
+    .item-4 {
+        grid-area: 2 / 1 / span 1 / span 2;
+        align-self: end;
+        justify-self: center; 
+        
+    }
+}
